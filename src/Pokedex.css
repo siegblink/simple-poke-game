@@ -1,10 +1,31 @@
 .pokedex > .pokedex-cards {
-  padding: 20px;
+  padding: 20px 0px;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.pokedex > h1 {
-  margin: 8px 0px 0px 20px;
+.pokedex > .pokedex-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.pokedex > .pokedex-info > h1,
+.pokedex > .pokedex-info > p {
+  margin: 0;
+}
+
+.pokedex > .pokedex-info > p {
+  padding-left: 16px;
+}
+
+.pokedex > .pokedex-info > .winner {
+  color: hsl(120, 63%, 29%);
+}
+
+.pokedex > .pokedex-info > .winner::before {
+  content: '\00b7';
+  color: black;
+  padding-right: 16px;
 }
