@@ -15,5 +15,9 @@
 }
 
 .pokecard > img {
-  justify-self: start;
+  transition: all .2s ease-in-out;
+}
+
+.pokecard > img:hover {
+  transform: scale(1.05);
 }
