@@ -15,14 +15,14 @@ function padToThree(number) {
 
 class Pokecard extends Component {
   render() {
-    let imageSource = `${POKE_API}00${this.props.id}.png`
+    let imageSource = `${POKE_API}${padToThree(this.props.id)}.png`
 
     return (
       <div className='pokecard'>
         <img src={imageSource} alt={this.props.name} />
         <div>
           <h1>{this.props.name}</h1>
-          <p>Type: {padToThree(this.props.type)}</p>
+          <p>Type: {this.props.type}</p>
           <p>Exp: {this.props.exp}</p>
         </div>
       </div>
